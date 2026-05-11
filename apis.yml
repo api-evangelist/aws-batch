@@ -1,0 +1,65 @@
+aid: aws-batch
+name: AWS Batch
+description: >-
+  AWS Batch is a fully managed batch computing service that enables
+  developers, scientists, and engineers to run hundreds of thousands of
+  batch and machine learning compute jobs efficiently on AWS by dynamically
+  provisioning the optimal quantity and type of compute resources based on
+  job volume and resource requirements. The AWS Batch API provides
+  programmatic management of compute environments, job queues, job
+  definitions, scheduling policies, and job submission and lifecycle
+  operations, authenticated with AWS Signature Version 4 (SigV4).
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - Batch Computing
+  - Compute
+  - HPC
+  - Job Scheduling
+  - Containers
+  - AWS
+  - Managed Service
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/aws-batch/refs/heads/main/apis.yml
+created: '2026-05-11'
+modified: '2026-05-11'
+specificationVersion: '0.19'
+apis:
+  - aid: aws-batch:api
+    name: AWS Batch API
+    description: >-
+      REST API for managing AWS Batch compute environments, job queues,
+      job definitions, scheduling policies, consumable resources, and jobs.
+      Operations are exposed as POST endpoints under /v1/ paths with JSON
+      request and response bodies and are authenticated using AWS Signature
+      Version 4 (SigV4).
+    humanURL: https://docs.aws.amazon.com/batch/latest/APIReference/Welcome.html
+    baseURL: https://batch.us-east-1.amazonaws.com
+    tags:
+      - Batch Computing
+      - Job Scheduling
+      - Containers
+      - HPC
+      - AWS
+    properties:
+      - type: Documentation
+        url: https://docs.aws.amazon.com/batch/latest/APIReference/Welcome.html
+      - type: Actions
+        url: https://docs.aws.amazon.com/batch/latest/APIReference/API_Operations.html
+      - type: Authentication
+        url: https://docs.aws.amazon.com/batch/latest/userguide/security-iam.html
+      - type: Endpoints
+        url: https://docs.aws.amazon.com/general/latest/gr/batch.html
+
+common:
+  - type: Website
+    url: https://aws.amazon.com/batch/
+  - type: Documentation
+    url: https://docs.aws.amazon.com/batch/
+  - type: Pricing
+    url: https://aws.amazon.com/batch/pricing/
+  - type: Sign Up
+    url: https://portal.aws.amazon.com/billing/signup
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
