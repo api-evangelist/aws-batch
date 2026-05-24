@@ -1,0 +1,233 @@
+openapi: 3.1.0
+info:
+  title: AWS Batch API
+  version: '2016-08-10'
+  description: |
+    AWS Batch enables developers to run batch and machine-learning compute
+    jobs efficiently on AWS by dynamically provisioning the optimal quantity
+    and type of compute resources. The API provides operations for managing
+    compute environments, job queues, job definitions, scheduling policies,
+    and submitting/terminating jobs. All requests are signed with AWS
+    Signature Version 4 (SigV4).
+
+    See https://docs.aws.amazon.com/batch/latest/APIReference/Welcome.html
+    for full reference.
+servers:
+  - url: https://batch.{region}.amazonaws.com
+    description: AWS Batch regional endpoint
+    variables:
+      region:
+        default: us-east-1
+tags:
+  - name: Compute Environments
+  - name: Job Queues
+  - name: Job Definitions
+  - name: Jobs
+  - name: Scheduling Policies
+  - name: Tags
+security:
+  - SigV4: []
+paths:
+  /v1/createcomputeenvironment:
+    post:
+      tags: [Compute Environments]
+      operationId: CreateComputeEnvironment
+      summary: Create a compute environment
+      requestBody: { $ref: '#/components/requestBodies/JsonBody' }
+      responses: { '200': { $ref: '#/components/responses/OK' } }
+  /v1/describecomputeenvironments:
+    post:
+      tags: [Compute Environments]
+      operationId: DescribeComputeEnvironments
+      summary: Describe compute environments
+      requestBody: { $ref: '#/components/requestBodies/JsonBody' }
+      responses: { '200': { $ref: '#/components/responses/OK' } }
+  /v1/updatecomputeenvironment:
+    post:
+      tags: [Compute Environments]
+      operationId: UpdateComputeEnvironment
+      summary: Update a compute environment
+      requestBody: { $ref: '#/components/requestBodies/JsonBody' }
+      responses: { '200': { $ref: '#/components/responses/OK' } }
+  /v1/deletecomputeenvironment:
+    post:
+      tags: [Compute Environments]
+      operationId: DeleteComputeEnvironment
+      summary: Delete a compute environment
+      requestBody: { $ref: '#/components/requestBodies/JsonBody' }
+      responses: { '200': { $ref: '#/components/responses/OK' } }
+  /v1/createjobqueue:
+    post:
+      tags: [Job Queues]
+      operationId: CreateJobQueue
+      summary: Create a job queue
+      requestBody: { $ref: '#/components/requestBodies/JsonBody' }
+      responses: { '200': { $ref: '#/components/responses/OK' } }
+  /v1/describejobqueues:
+    post:
+      tags: [Job Queues]
+      operationId: DescribeJobQueues
+      summary: Describe job queues
+      requestBody: { $ref: '#/components/requestBodies/JsonBody' }
+      responses: { '200': { $ref: '#/components/responses/OK' } }
+  /v1/updatejobqueue:
+    post:
+      tags: [Job Queues]
+      operationId: UpdateJobQueue
+      summary: Update a job queue
+      requestBody: { $ref: '#/components/requestBodies/JsonBody' }
+      responses: { '200': { $ref: '#/components/responses/OK' } }
+  /v1/deletejobqueue:
+    post:
+      tags: [Job Queues]
+      operationId: DeleteJobQueue
+      summary: Delete a job queue
+      requestBody: { $ref: '#/components/requestBodies/JsonBody' }
+      responses: { '200': { $ref: '#/components/responses/OK' } }
+  /v1/registerjobdefinition:
+    post:
+      tags: [Job Definitions]
+      operationId: RegisterJobDefinition
+      summary: Register a job definition
+      requestBody: { $ref: '#/components/requestBodies/JsonBody' }
+      responses: { '200': { $ref: '#/components/responses/OK' } }
+  /v1/describejobdefinitions:
+    post:
+      tags: [Job Definitions]
+      operationId: DescribeJobDefinitions
+      summary: Describe job definitions
+      requestBody: { $ref: '#/components/requestBodies/JsonBody' }
+      responses: { '200': { $ref: '#/components/responses/OK' } }
+  /v1/deregisterjobdefinition:
+    post:
+      tags: [Job Definitions]
+      operationId: DeregisterJobDefinition
+      summary: Deregister a job definition
+      requestBody: { $ref: '#/components/requestBodies/JsonBody' }
+      responses: { '200': { $ref: '#/components/responses/OK' } }
+  /v1/submitjob:
+    post:
+      tags: [Jobs]
+      operationId: SubmitJob
+      summary: Submit a job
+      requestBody: { $ref: '#/components/requestBodies/JsonBody' }
+      responses: { '200': { $ref: '#/components/responses/OK' } }
+  /v1/listjobs:
+    post:
+      tags: [Jobs]
+      operationId: ListJobs
+      summary: List jobs
+      requestBody: { $ref: '#/components/requestBodies/JsonBody' }
+      responses: { '200': { $ref: '#/components/responses/OK' } }
+  /v1/describejobs:
+    post:
+      tags: [Jobs]
+      operationId: DescribeJobs
+      summary: Describe jobs
+      requestBody: { $ref: '#/components/requestBodies/JsonBody' }
+      responses: { '200': { $ref: '#/components/responses/OK' } }
+  /v1/canceljob:
+    post:
+      tags: [Jobs]
+      operationId: CancelJob
+      summary: Cancel a job
+      requestBody: { $ref: '#/components/requestBodies/JsonBody' }
+      responses: { '200': { $ref: '#/components/responses/OK' } }
+  /v1/terminatejob:
+    post:
+      tags: [Jobs]
+      operationId: TerminateJob
+      summary: Terminate a job
+      requestBody: { $ref: '#/components/requestBodies/JsonBody' }
+      responses: { '200': { $ref: '#/components/responses/OK' } }
+  /v1/createschedulingpolicy:
+    post:
+      tags: [Scheduling Policies]
+      operationId: CreateSchedulingPolicy
+      summary: Create a scheduling policy
+      requestBody: { $ref: '#/components/requestBodies/JsonBody' }
+      responses: { '200': { $ref: '#/components/responses/OK' } }
+  /v1/describeschedulingpolicies:
+    post:
+      tags: [Scheduling Policies]
+      operationId: DescribeSchedulingPolicies
+      summary: Describe scheduling policies
+      requestBody: { $ref: '#/components/requestBodies/JsonBody' }
+      responses: { '200': { $ref: '#/components/responses/OK' } }
+  /v1/listschedulingpolicies:
+    post:
+      tags: [Scheduling Policies]
+      operationId: ListSchedulingPolicies
+      summary: List scheduling policies
+      requestBody: { $ref: '#/components/requestBodies/JsonBody' }
+      responses: { '200': { $ref: '#/components/responses/OK' } }
+  /v1/updateschedulingpolicy:
+    post:
+      tags: [Scheduling Policies]
+      operationId: UpdateSchedulingPolicy
+      summary: Update a scheduling policy
+      requestBody: { $ref: '#/components/requestBodies/JsonBody' }
+      responses: { '200': { $ref: '#/components/responses/OK' } }
+  /v1/deleteschedulingpolicy:
+    post:
+      tags: [Scheduling Policies]
+      operationId: DeleteSchedulingPolicy
+      summary: Delete a scheduling policy
+      requestBody: { $ref: '#/components/requestBodies/JsonBody' }
+      responses: { '200': { $ref: '#/components/responses/OK' } }
+  /v1/tags/{resourceArn}:
+    get:
+      tags: [Tags]
+      operationId: ListTagsForResource
+      summary: List tags
+      parameters:
+        - $ref: '#/components/parameters/ResourceArn'
+      responses: { '200': { $ref: '#/components/responses/OK' } }
+    post:
+      tags: [Tags]
+      operationId: TagResource
+      summary: Tag a resource
+      parameters:
+        - $ref: '#/components/parameters/ResourceArn'
+      requestBody: { $ref: '#/components/requestBodies/JsonBody' }
+      responses: { '200': { $ref: '#/components/responses/OK' } }
+    delete:
+      tags: [Tags]
+      operationId: UntagResource
+      summary: Untag a resource
+      parameters:
+        - $ref: '#/components/parameters/ResourceArn'
+        - name: tagKeys
+          in: query
+          required: true
+          schema: { type: array, items: { type: string } }
+      responses: { '200': { $ref: '#/components/responses/OK' } }
+components:
+  parameters:
+    ResourceArn:
+      name: resourceArn
+      in: path
+      required: true
+      schema: { type: string }
+  requestBodies:
+    JsonBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            additionalProperties: true
+  responses:
+    OK:
+      description: Successful response
+      content:
+        application/json:
+          schema:
+            type: object
+            additionalProperties: true
+  securitySchemes:
+    SigV4:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: AWS Signature Version 4 signed Authorization header
