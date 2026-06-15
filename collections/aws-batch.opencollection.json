@@ -1,0 +1,444 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "AWS Batch API",
+    "version": "2016-08-10"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Compute Environments",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create a compute environment",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://batch.{region}.amazonaws.com/v1/createcomputeenvironment",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a compute environment"
+        },
+        {
+          "info": {
+            "name": "Describe compute environments",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://batch.{region}.amazonaws.com/v1/describecomputeenvironments",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Describe compute environments"
+        },
+        {
+          "info": {
+            "name": "Update a compute environment",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://batch.{region}.amazonaws.com/v1/updatecomputeenvironment",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update a compute environment"
+        },
+        {
+          "info": {
+            "name": "Delete a compute environment",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://batch.{region}.amazonaws.com/v1/deletecomputeenvironment",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Delete a compute environment"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Job Queues",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create a job queue",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://batch.{region}.amazonaws.com/v1/createjobqueue",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a job queue"
+        },
+        {
+          "info": {
+            "name": "Describe job queues",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://batch.{region}.amazonaws.com/v1/describejobqueues",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Describe job queues"
+        },
+        {
+          "info": {
+            "name": "Update a job queue",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://batch.{region}.amazonaws.com/v1/updatejobqueue",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update a job queue"
+        },
+        {
+          "info": {
+            "name": "Delete a job queue",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://batch.{region}.amazonaws.com/v1/deletejobqueue",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Delete a job queue"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Job Definitions",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Register a job definition",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://batch.{region}.amazonaws.com/v1/registerjobdefinition",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Register a job definition"
+        },
+        {
+          "info": {
+            "name": "Describe job definitions",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://batch.{region}.amazonaws.com/v1/describejobdefinitions",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Describe job definitions"
+        },
+        {
+          "info": {
+            "name": "Deregister a job definition",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://batch.{region}.amazonaws.com/v1/deregisterjobdefinition",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Deregister a job definition"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Jobs",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Submit a job",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://batch.{region}.amazonaws.com/v1/submitjob",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Submit a job"
+        },
+        {
+          "info": {
+            "name": "List jobs",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://batch.{region}.amazonaws.com/v1/listjobs",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "List jobs"
+        },
+        {
+          "info": {
+            "name": "Describe jobs",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://batch.{region}.amazonaws.com/v1/describejobs",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Describe jobs"
+        },
+        {
+          "info": {
+            "name": "Cancel a job",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://batch.{region}.amazonaws.com/v1/canceljob",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Cancel a job"
+        },
+        {
+          "info": {
+            "name": "Terminate a job",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://batch.{region}.amazonaws.com/v1/terminatejob",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Terminate a job"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Scheduling Policies",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create a scheduling policy",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://batch.{region}.amazonaws.com/v1/createschedulingpolicy",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a scheduling policy"
+        },
+        {
+          "info": {
+            "name": "Describe scheduling policies",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://batch.{region}.amazonaws.com/v1/describeschedulingpolicies",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Describe scheduling policies"
+        },
+        {
+          "info": {
+            "name": "List scheduling policies",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://batch.{region}.amazonaws.com/v1/listschedulingpolicies",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "List scheduling policies"
+        },
+        {
+          "info": {
+            "name": "Update a scheduling policy",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://batch.{region}.amazonaws.com/v1/updateschedulingpolicy",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update a scheduling policy"
+        },
+        {
+          "info": {
+            "name": "Delete a scheduling policy",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://batch.{region}.amazonaws.com/v1/deleteschedulingpolicy",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Delete a scheduling policy"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Tags",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List tags",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://batch.{region}.amazonaws.com/v1/tags/:resourceArn",
+            "params": [
+              {
+                "name": "resourceArn",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List tags"
+        },
+        {
+          "info": {
+            "name": "Tag a resource",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://batch.{region}.amazonaws.com/v1/tags/:resourceArn",
+            "params": [
+              {
+                "name": "resourceArn",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Tag a resource"
+        },
+        {
+          "info": {
+            "name": "Untag a resource",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://batch.{region}.amazonaws.com/v1/tags/:resourceArn",
+            "params": [
+              {
+                "name": "resourceArn",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "tagKeys",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Untag a resource"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
