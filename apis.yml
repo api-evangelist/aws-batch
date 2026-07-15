@@ -52,6 +52,8 @@ apis:
         url: https://docs.aws.amazon.com/general/latest/gr/batch.html
 
 common:
+  - type: AgenticAccess
+    url: agentic-access/aws-batch-agentic-access.yml
   - type: TrustCenter
     url: security/aws-batch-trust-center.yml
   - type: VulnerabilityDisclosure
