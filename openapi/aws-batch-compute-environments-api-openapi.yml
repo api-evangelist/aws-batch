@@ -1,0 +1,100 @@
+openapi: 3.1.0
+info:
+  title: AWS Batch Compute Environments API
+  version: '2016-08-10'
+  description: 'AWS Batch enables developers to run batch and machine-learning compute
+
+    jobs efficiently on AWS by dynamically provisioning the optimal quantity
+
+    and type of compute resources. The API provides operations for managing
+
+    compute environments, job queues, job definitions, scheduling policies,
+
+    and submitting/terminating jobs. All requests are signed with AWS
+
+    Signature Version 4 (SigV4).
+
+
+    See https://docs.aws.amazon.com/batch/latest/APIReference/Welcome.html
+
+    for full reference.
+
+    '
+servers:
+- url: https://batch.{region}.amazonaws.com
+  description: AWS Batch regional endpoint
+  variables:
+    region:
+      default: us-east-1
+security:
+- SigV4: []
+tags:
+- name: Compute Environments
+paths:
+  /v1/createcomputeenvironment:
+    post:
+      tags:
+      - Compute Environments
+      operationId: CreateComputeEnvironment
+      summary: Create a compute environment
+      requestBody:
+        $ref: '#/components/requestBodies/JsonBody'
+      responses:
+        '200':
+          $ref: '#/components/responses/OK'
+  /v1/describecomputeenvironments:
+    post:
+      tags:
+      - Compute Environments
+      operationId: DescribeComputeEnvironments
+      summary: Describe compute environments
+      requestBody:
+        $ref: '#/components/requestBodies/JsonBody'
+      responses:
+        '200':
+          $ref: '#/components/responses/OK'
+  /v1/updatecomputeenvironment:
+    post:
+      tags:
+      - Compute Environments
+      operationId: UpdateComputeEnvironment
+      summary: Update a compute environment
+      requestBody:
+        $ref: '#/components/requestBodies/JsonBody'
+      responses:
+        '200':
+          $ref: '#/components/responses/OK'
+  /v1/deletecomputeenvironment:
+    post:
+      tags:
+      - Compute Environments
+      operationId: DeleteComputeEnvironment
+      summary: Delete a compute environment
+      requestBody:
+        $ref: '#/components/requestBodies/JsonBody'
+      responses:
+        '200':
+          $ref: '#/components/responses/OK'
+components:
+  responses:
+    OK:
+      description: Successful response
+      content:
+        application/json:
+          schema:
+            type: object
+            additionalProperties: true
+  requestBodies:
+    JsonBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            additionalProperties: true
+  securitySchemes:
+    SigV4:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: AWS Signature Version 4 signed Authorization header

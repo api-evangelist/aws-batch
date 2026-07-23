@@ -1,0 +1,103 @@
+openapi: 3.1.0
+info:
+  title: AWS Batch Compute Environments Tags API
+  version: '2016-08-10'
+  description: 'AWS Batch enables developers to run batch and machine-learning compute
+
+    jobs efficiently on AWS by dynamically provisioning the optimal quantity
+
+    and type of compute resources. The API provides operations for managing
+
+    compute environments, job queues, job definitions, scheduling policies,
+
+    and submitting/terminating jobs. All requests are signed with AWS
+
+    Signature Version 4 (SigV4).
+
+
+    See https://docs.aws.amazon.com/batch/latest/APIReference/Welcome.html
+
+    for full reference.
+
+    '
+servers:
+- url: https://batch.{region}.amazonaws.com
+  description: AWS Batch regional endpoint
+  variables:
+    region:
+      default: us-east-1
+security:
+- SigV4: []
+tags:
+- name: Tags
+paths:
+  /v1/tags/{resourceArn}:
+    get:
+      tags:
+      - Tags
+      operationId: ListTagsForResource
+      summary: List tags
+      parameters:
+      - $ref: '#/components/parameters/ResourceArn'
+      responses:
+        '200':
+          $ref: '#/components/responses/OK'
+    post:
+      tags:
+      - Tags
+      operationId: TagResource
+      summary: Tag a resource
+      parameters:
+      - $ref: '#/components/parameters/ResourceArn'
+      requestBody:
+        $ref: '#/components/requestBodies/JsonBody'
+      responses:
+        '200':
+          $ref: '#/components/responses/OK'
+    delete:
+      tags:
+      - Tags
+      operationId: UntagResource
+      summary: Untag a resource
+      parameters:
+      - $ref: '#/components/parameters/ResourceArn'
+      - name: tagKeys
+        in: query
+        required: true
+        schema:
+          type: array
+          items:
+            type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/OK'
+components:
+  responses:
+    OK:
+      description: Successful response
+      content:
+        application/json:
+          schema:
+            type: object
+            additionalProperties: true
+  requestBodies:
+    JsonBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            additionalProperties: true
+  parameters:
+    ResourceArn:
+      name: resourceArn
+      in: path
+      required: true
+      schema:
+        type: string
+  securitySchemes:
+    SigV4:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: AWS Signature Version 4 signed Authorization header
