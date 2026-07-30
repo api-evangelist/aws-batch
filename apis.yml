@@ -10,7 +10,19 @@ description: >-
   definitions, scheduling policies, and job submission and lifecycle
   operations, authenticated with AWS Signature Version 4 (SigV4).
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/aws-batch.png
 tags:
   - Batch Computing
   - Compute
@@ -25,32 +37,89 @@ created: '2026-05-11'
 modified: '2026-05-11'
 specificationVersion: '0.19'
 apis:
-  - aid: aws-batch:api
-    name: AWS Batch API
-    description: >-
-      REST API for managing AWS Batch compute environments, job queues,
-      job definitions, scheduling policies, consumable resources, and jobs.
-      Operations are exposed as POST endpoints under /v1/ paths with JSON
-      request and response bodies and are authenticated using AWS Signature
-      Version 4 (SigV4).
-    humanURL: https://docs.aws.amazon.com/batch/latest/APIReference/Welcome.html
-    baseURL: https://batch.us-east-1.amazonaws.com
-    tags:
-      - Batch Computing
-      - Job Scheduling
-      - Containers
-      - HPC
-      - AWS
-    properties:
-      - type: Documentation
-        url: https://docs.aws.amazon.com/batch/latest/APIReference/Welcome.html
-      - type: Actions
-        url: https://docs.aws.amazon.com/batch/latest/APIReference/API_Operations.html
-      - type: Authentication
-        url: https://docs.aws.amazon.com/batch/latest/userguide/security-iam.html
-      - type: Endpoints
-        url: https://docs.aws.amazon.com/general/latest/gr/batch.html
-
+- aid: aws-batch:api
+  name: AWS Batch API
+  description: >-
+    REST API for managing AWS Batch compute environments, job queues, job definitions, scheduling policies,
+    consumable resources, and jobs. Operations are exposed as POST endpoints under /v1/ paths with JSON
+    request and response bodies and are authenticated using AWS Signature Version 4 (SigV4).
+  humanURL: https://docs.aws.amazon.com/batch/latest/APIReference/Welcome.html
+  baseURL: https://batch.us-east-1.amazonaws.com
+  tags:
+  - Batch Computing
+  - Job Scheduling
+  - Containers
+  - HPC
+  - AWS
+  properties:
+  - type: Documentation
+    url: https://docs.aws.amazon.com/batch/latest/APIReference/Welcome.html
+  - type: Actions
+    url: https://docs.aws.amazon.com/batch/latest/APIReference/API_Operations.html
+  - type: Authentication
+    url: https://docs.aws.amazon.com/batch/latest/userguide/security-iam.html
+  - type: Endpoints
+    url: https://docs.aws.amazon.com/general/latest/gr/batch.html
+- aid: aws-batch:aws-batch-compute-environments-api
+  name: AWS Batch Compute Environments API
+  description: The Compute Environments API from AWS Batch — 4 operation(s) for compute environments.
+  humanURL: https://docs.aws.amazon.com/batch/latest/APIReference/Welcome.html
+  baseURL: https://batch.us-east-1.amazonaws.com
+  tags:
+  - Compute Environments
+  properties:
+  - type: OpenAPI
+    url: openapi/aws-batch-compute-environments-api-openapi.yml
+- aid: aws-batch:aws-batch-job-definitions-api
+  name: AWS Batch Job Definitions API
+  description: The Job Definitions API from AWS Batch — 3 operation(s) for job definitions.
+  humanURL: https://docs.aws.amazon.com/batch/latest/APIReference/Welcome.html
+  baseURL: https://batch.us-east-1.amazonaws.com
+  tags:
+  - Job Definitions
+  properties:
+  - type: OpenAPI
+    url: openapi/aws-batch-job-definitions-api-openapi.yml
+- aid: aws-batch:aws-batch-job-queues-api
+  name: AWS Batch Job Queues API
+  description: The Job Queues API from AWS Batch — 4 operation(s) for job queues.
+  humanURL: https://docs.aws.amazon.com/batch/latest/APIReference/Welcome.html
+  baseURL: https://batch.us-east-1.amazonaws.com
+  tags:
+  - Job Queues
+  properties:
+  - type: OpenAPI
+    url: openapi/aws-batch-job-queues-api-openapi.yml
+- aid: aws-batch:aws-batch-jobs-api
+  name: AWS Batch Jobs API
+  description: The Jobs API from AWS Batch — 5 operation(s) for jobs.
+  humanURL: https://docs.aws.amazon.com/batch/latest/APIReference/Welcome.html
+  baseURL: https://batch.us-east-1.amazonaws.com
+  tags:
+  - Jobs
+  properties:
+  - type: OpenAPI
+    url: openapi/aws-batch-jobs-api-openapi.yml
+- aid: aws-batch:aws-batch-scheduling-policies-api
+  name: AWS Batch Scheduling Policies API
+  description: The Scheduling Policies API from AWS Batch — 5 operation(s) for scheduling policies.
+  humanURL: https://docs.aws.amazon.com/batch/latest/APIReference/Welcome.html
+  baseURL: https://batch.us-east-1.amazonaws.com
+  tags:
+  - Scheduling Policies
+  properties:
+  - type: OpenAPI
+    url: openapi/aws-batch-scheduling-policies-api-openapi.yml
+- aid: aws-batch:aws-batch-tags-api
+  name: AWS Batch Tags API
+  description: The Tags API from AWS Batch — 1 operation(s) for tags.
+  humanURL: https://docs.aws.amazon.com/batch/latest/APIReference/Welcome.html
+  baseURL: https://batch.us-east-1.amazonaws.com
+  tags:
+  - Tags
+  properties:
+  - type: OpenAPI
+    url: openapi/aws-batch-tags-api-openapi.yml
 common:
   - type: AgenticAccess
     url: agentic-access/aws-batch-agentic-access.yml
