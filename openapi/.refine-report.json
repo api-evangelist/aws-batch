@@ -1,0 +1,24 @@
+{
+  "provider": "aws-batch",
+  "sources": [
+    "aws-batch-compute-environments-api-openapi.yml",
+    "aws-batch-job-definitions-api-openapi.yml",
+    "aws-batch-job-queues-api-openapi.yml",
+    "aws-batch-jobs-api-openapi.yml",
+    "aws-batch-scheduling-policies-api-openapi.yml",
+    "aws-batch-tags-api-openapi.yml"
+  ],
+  "outputs": [
+    "aws-batch-compute-environments-api-openapi.yml",
+    "aws-batch-job-definitions-api-openapi.yml",
+    "aws-batch-job-queues-api-openapi.yml",
+    "aws-batch-jobs-api-openapi.yml",
+    "aws-batch-scheduling-policies-api-openapi.yml",
+    "aws-batch-tags-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
