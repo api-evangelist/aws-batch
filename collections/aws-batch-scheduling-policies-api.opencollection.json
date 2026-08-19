@@ -1,0 +1,101 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "AWS Batch Compute Environments Scheduling Policies API",
+    "version": "2016-08-10"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Scheduling Policies",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create a scheduling policy",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://batch.{region}.amazonaws.com/v1/createschedulingpolicy",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a scheduling policy"
+        },
+        {
+          "info": {
+            "name": "Describe scheduling policies",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://batch.{region}.amazonaws.com/v1/describeschedulingpolicies",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Describe scheduling policies"
+        },
+        {
+          "info": {
+            "name": "List scheduling policies",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://batch.{region}.amazonaws.com/v1/listschedulingpolicies",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "List scheduling policies"
+        },
+        {
+          "info": {
+            "name": "Update a scheduling policy",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://batch.{region}.amazonaws.com/v1/updateschedulingpolicy",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update a scheduling policy"
+        },
+        {
+          "info": {
+            "name": "Delete a scheduling policy",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://batch.{region}.amazonaws.com/v1/deleteschedulingpolicy",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Delete a scheduling policy"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

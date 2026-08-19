@@ -1,0 +1,71 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "AWS Batch Compute Environments Job Definitions API",
+    "version": "2016-08-10"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Job Definitions",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Register a job definition",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://batch.{region}.amazonaws.com/v1/registerjobdefinition",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Register a job definition"
+        },
+        {
+          "info": {
+            "name": "Describe job definitions",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://batch.{region}.amazonaws.com/v1/describejobdefinitions",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Describe job definitions"
+        },
+        {
+          "info": {
+            "name": "Deregister a job definition",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://batch.{region}.amazonaws.com/v1/deregisterjobdefinition",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Deregister a job definition"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
