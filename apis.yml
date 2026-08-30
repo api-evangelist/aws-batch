@@ -120,6 +120,8 @@ apis:
   humanURL: https://docs.aws.amazon.com/batch/latest/APIReference/Welcome.html
   baseURL: https://batch.us-east-1.amazonaws.com
   tags:
+  - Scheduling - Policies
+  tags_raw:
   - Scheduling Policies
   properties:
   - type: OpenAPI
