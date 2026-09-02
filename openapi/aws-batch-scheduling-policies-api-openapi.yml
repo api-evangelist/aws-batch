@@ -1,4 +1,4 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
   title: AWS Batch Compute Environments Scheduling Policies API
   version: '2016-08-10'

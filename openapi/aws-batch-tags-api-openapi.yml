@@ -1,4 +1,4 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
   title: AWS Batch Compute Environments Tags API
   version: '2016-08-10'
@@ -72,6 +72,13 @@ paths:
         '200':
           $ref: '#/components/responses/OK'
 components:
+  parameters:
+    ResourceArn:
+      name: resourceArn
+      in: path
+      required: true
+      schema:
+        type: string
   responses:
     OK:
       description: Successful response
@@ -88,13 +95,6 @@ components:
           schema:
             type: object
             additionalProperties: true
-  parameters:
-    ResourceArn:
-      name: resourceArn
-      in: path
-      required: true
-      schema:
-        type: string
   securitySchemes:
     SigV4:
       type: apiKey
