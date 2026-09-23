@@ -17,9 +17,7 @@ info:
 
     See https://docs.aws.amazon.com/batch/latest/APIReference/Welcome.html
 
-    for full reference.
-
-    '
+    for full reference.'
 servers:
 - url: https://batch.{region}.amazonaws.com
   description: AWS Batch regional endpoint
