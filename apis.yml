@@ -44,6 +44,7 @@ tags:
   - Containers
   - AWS
   - Managed Service
+  - Scheduling
 url: >-
   https://raw.githubusercontent.com/api-evangelist/aws-batch/refs/heads/main/apis.yml
 created: '2026-05-11'
@@ -159,5 +160,5 @@ common:
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
-x-parent: aws
+x-parent: amazon-web-services
 x-relationship: product
