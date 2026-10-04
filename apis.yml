@@ -139,6 +139,9 @@ apis:
   - type: OpenAPI
     url: openapi/aws-batch-tags-api-openapi.yml
 common:
+  - type: CapabilityMap
+    url: capabilities/aws-batch-capability-edges.yml
+    name: AWS Batch Business Capability Map
   - type: AgenticAccess
     url: agentic-access/aws-batch-agentic-access.yml
   - type: TrustCenter
