@@ -70,6 +70,14 @@ paths:
         '200':
           $ref: '#/components/responses/OK'
 components:
+  responses:
+    OK:
+      description: Successful response
+      content:
+        application/json:
+          schema:
+            type: object
+            additionalProperties: true
   requestBodies:
     JsonBody:
       required: true
@@ -85,14 +93,6 @@ components:
       required: true
       schema:
         type: string
-  responses:
-    OK:
-      description: Successful response
-      content:
-        application/json:
-          schema:
-            type: object
-            additionalProperties: true
   securitySchemes:
     SigV4:
       type: apiKey
