@@ -1,4 +1,4 @@
-# AWS Batch (aws-batch)
+# AWS Batch
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,61 +66,113 @@
 
 AWS Batch is a fully managed batch computing service that enables developers, scientists, and engineers to run hundreds of thousands of batch and machine learning compute jobs efficiently on AWS by dynamically provisioning the optimal quantity and type of compute resources based on job volume and resource requirements. The AWS Batch API provides programmatic management of compute environments, job queues, job definitions, scheduling policies, and job submission and lifecycle operations, authenticated with AWS Signature Version 4 (SigV4).
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/aws-batch/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/aws-batch/refs/heads/main/apis.yml)
+**Areas:** Batch Computing · Compute · HPC · Job Scheduling · Containers · AWS · Managed Service · Scheduling
 
-## Scope
+## AWS Batch on APIs.io
 
-- **Type:** Index
+Everything profiled for AWS Batch is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/aws-batch/](https://apis.io/providers/aws-batch/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (8)
 
-- Batch Computing
-- Compute
-- HPC
-- Job Scheduling
-- Containers
-- AWS
-- Managed Service
+- [AWS Batch API](https://apis.io/apis/aws-batch/api/) — REST API for managing AWS Batch compute environments, job queues, job definitions, scheduling policies, consumable resources, and jobs. Operations are…
+- [AWS Batch Compute Environments API](https://apis.io/apis/aws-batch/aws-batch-compute-environments-api/) — The Compute Environments API from AWS Batch — 4 operation(s) for compute environments.
+- [AWS Batch Job Definitions API](https://apis.io/apis/aws-batch/aws-batch-job-definitions-api/) — The Job Definitions API from AWS Batch — 3 operation(s) for job definitions.
+- [AWS Batch Job Queues API](https://apis.io/apis/aws-batch/aws-batch-job-queues-api/) — The Job Queues API from AWS Batch — 4 operation(s) for job queues.
+- [AWS Batch Jobs API](https://apis.io/apis/aws-batch/aws-batch-jobs-api/) — The Jobs API from AWS Batch — 5 operation(s) for jobs.
+- [AWS Batch Scheduling Policies API](https://apis.io/apis/aws-batch/aws-batch-scheduling-policies-api/) — The Scheduling Policies API from AWS Batch — 5 operation(s) for scheduling policies.
+- [AWS Batch Tags API](https://apis.io/apis/aws-batch/aws-batch-tags-api/) — The Tags API from AWS Batch — 1 operation(s) for tags.
+- [AWS Batch Batch Operations API](https://apis.io/apis/aws-batch/aws-batch-operations-api/) — The Batch Operations API from AWS Batch — 24 operation(s) for batch operations.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-05-11
-- **Modified:** 2026-05-11
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### AWS Batch API
+Which operations an agent can call, which act, and which need a human in the loop.
 
-REST API for managing AWS Batch compute environments, job queues, job definitions, scheduling policies, consumable resources, and jobs. Operations are exposed as POST endpoints under /v1/ paths with JSON request and response bodies and are authenticated using AWS Signature Version 4 (SigV4).
+- [Aws Batch Agentic Access](https://apis.io/agentic-access/aws-batch/aws-batch-agentic-access/)
 
-- **Human URL:** [https://docs.aws.amazon.com/batch/latest/APIReference/Welcome.html](https://docs.aws.amazon.com/batch/latest/APIReference/Welcome.html)
-- **Base URL:** `https://batch.us-east-1.amazonaws.com`
+#### Collections (7)
 
-#### Tags
+Postman and Open Collection request collections.
 
-- Batch Computing
-- Job Scheduling
-- Containers
-- HPC
-- AWS
+- [AWS Batch API](https://apis.io/collections/aws-batch/open-aws-batch/)
+- [AWS Batch Compute Environments API](https://apis.io/collections/aws-batch/open-aws-batch-compute-environments-api/)
+- [AWS Batch Compute Environments Job Definitions API](https://apis.io/collections/aws-batch/open-aws-batch-job-definitions-api/)
+- [AWS Batch Compute Environments Job Queues API](https://apis.io/collections/aws-batch/open-aws-batch-job-queues-api/)
+- [AWS Batch Compute Environments Jobs API](https://apis.io/collections/aws-batch/open-aws-batch-jobs-api/)
+- [AWS Batch Compute Environments Scheduling Policies API](https://apis.io/collections/aws-batch/open-aws-batch-scheduling-policies-api/)
+- [AWS Batch Compute Environments Tags API](https://apis.io/collections/aws-batch/open-aws-batch-tags-api/)
 
-#### Properties
+#### Security (4)
 
-- [Documentation](https://docs.aws.amazon.com/batch/latest/APIReference/Welcome.html)
-- [Actions](https://docs.aws.amazon.com/batch/latest/APIReference/API_Operations.html)
-- [Authentication](https://docs.aws.amazon.com/batch/latest/userguide/security-iam.html)
-- [Endpoints](https://docs.aws.amazon.com/general/latest/gr/batch.html)
-- [Postman Collection](collections/aws-batch.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/aws-batch.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+Authentication, trust centre, and vulnerability disclosure.
 
-## Common Properties
+- [Aws Batch Authentication](https://apis.io/security/aws-batch/aws-batch-authentication/)
+- [Aws Batch Domain Security](https://apis.io/security/aws-batch/aws-batch-domain-security/)
+- [Aws Batch Trust Center](https://apis.io/security/aws-batch/aws-batch-trust-center/)
+- [Aws Batch Vulnerability Disclosure](https://apis.io/security/aws-batch/aws-batch-vulnerability-disclosure/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://aws.amazon.com/batch/)
 - [Documentation](https://docs.aws.amazon.com/batch/)
 - [Pricing](https://aws.amazon.com/batch/pricing/)
-- [Sign Up](https://portal.aws.amazon.com/billing/signup)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 29.7** — thin · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 42.9 |
+| Contract governance | 0.0 |
+| Operational transparency | 10.5 |
+| Developer ergonomics | 21.4 |
+| Access clarity | 31.6 |
+
+**Agent readiness 20.7** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | documented (partial credit) |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | distinct |
+
+**Regulatory alignment 22.5** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/aws-batch/](https://apis.io/providers/aws-batch/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for AWS Batch: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/aws-batch/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
